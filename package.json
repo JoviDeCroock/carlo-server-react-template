@@ -1,0 +1,34 @@
+{
+  "private": true,
+  "name": "carlo-server-react-template",
+  "version": "1.0.0",
+  "license": "MIT",
+  "scripts": {
+    "build": "NODE_ENV=production node ./.carlo/build.js && pkg . --out-path binaries",
+    "start": "NODE_ENV=development node ./.carlo/start.js"
+  },
+  "bin": {
+    "your_app": "./.carlo/bin.js"
+  },
+  "pkg": {
+    "scripts": [
+      "./dist/**/*.js",
+      "./server/index.js"
+    ],
+    "assets": [
+      "./dist/**/*"
+    ]
+  },
+  "dependencies": {
+    "apollo-server": "2.9.6",
+    "graphql": "14.5.8",
+    "htm": "2.2.1",
+    "react": "16.10.2",
+    "react-dom": "16.10.2"
+  },
+  "devDependencies": {
+    "carlo": "0.9.46",
+    "carlo-webpack": "0.2.1",
+    "pkg": "^4.4.0"
+  }
+}
