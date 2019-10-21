@@ -24,7 +24,8 @@
     "graphql": "14.5.8",
     "htm": "2.2.1",
     "react": "16.10.2",
-    "react-dom": "16.10.2"
+    "react-dom": "16.10.2",
+    "urql": "^1.6.1"
   },
   "devDependencies": {
     "carlo": "0.9.46",

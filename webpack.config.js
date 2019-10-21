@@ -12,9 +12,15 @@ module.exports = {
         exclude: /node_modules/,
         type: 'javascript/auto',
       },
+      {
+        test: /\.mjs$/,
+        include: /node_modules\/\graphql/,
+        type: 'javascript/auto',
+      },
     ],
   },
   resolve: {
+    mainFields: ['module', 'main', 'browser'],
     extensions: ['.js'],
   },
   plugins: [
