@@ -27,7 +27,13 @@ module.exports = {
     process.env.NODE_ENV !== 'production' && new webpack.HotModuleReplacementPlugin()
   ].filter(Boolean),
   devServer: {
+    contentBase: path.join(__dirname, 'dist'),
+    host: 'localhost',
+    port: 8080,
+    historyApiFallback: true,
     hot: true,
-    contentBase: path.join(__dirname, 'dist')
+    inline: true,
+    publicPath: '/',
+    clientLogLevel: 'none',
   }
 };
